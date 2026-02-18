@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MongoDB - Query Profiler</title>
+
+    <!-- required tags  -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:300,500"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- css animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+  <body>
+    <!--------------- nav bar --------------->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"> AG </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html"> Projects </a></li>
+            <li><a href="resume.pdf" target="_blank"> Resume </a></li>
+            <li><a href="about.html"> About </a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!--------------- nav bar closed --------------->
+
+    <!--------------- animation container --------------->
+    <div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h1>MongoDB: Atlas Growth</h1>
+          <p>
+            During my time at MongoDB, I led and contributed to a wide range of
+            growth experiments. Many of these projects produced great results
+            and were shipped to production and remain live today. The work
+            spanned key parts of the user lifecycle, including onboarding,
+            monetization, and retention.
+          </p>
+          <p>
+            I also contributed to experiments that did not move metrics but
+            produced valuable insights that informed future decisions. Across
+            all of this work, my focus was on identifying growth opportunities
+            that addressed real user pain points while improving key business
+            metrics.
+          </p>
+          <p>
+            To respect confidentiality, specific business metrics are not
+            disclosed. Outcomes are described at a directional level.
+          </p>
+          <ul class="nav nav-tabs project-tabs">
+            <li class="active">
+              <a href="profiler.html">Project 1: Performance Diagnosis</a>
+            </li>
+            <li><a href="mongo.html">Project 2: Cluster Creation</a></li>
+            <li><a href="other-projects.html">Other Projects</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--------------- project 2 copy --------------->
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h1>Background</h1>
+          <p>
+            The Query Profiler is a MongoDB Atlas feature designed to help users
+            analyze slow queries, diagnose performance issues, and understand
+            query execution behavior.
+          </p>
+
+          <h3>Problem</h3>
+          <p>
+            We conducted user research and identified several pain points in the
+            existing experience. One of the primary issues was that users often
+            did not know how to diagnose a slow query. They frequently had to
+            reference external documentation, consult teammates, or rely on
+            other tools to understand what was happening.
+          </p>
+
+          <p>
+            Another issue was discoverability. Important features and details
+            were buried across multiple pages, even though users wanted to see
+            this information immediately while diagnosing performance problems.
+          </p>
+          <div class="under_images">
+            <p class="image-label">
+              Before: Selecting a query displayed only high-level information.
+            </p>
+            <img
+              src="images/mongo/profiler-before.png"
+              class="img-responsive mongo-modal-trigger"
+              alt="Profiler before redesign"
+            />
+          </div>
+
+          <h3>Hypothesis</h3>
+          <p>
+            Displaying guidance for slow queries and key information upfront
+            would help users diagnose issues more effectively, improving
+            outcomes such as index creation and retention.
+          </p>
+
+          <h3>Solution</h3>
+          <p>
+            Redesigned the Query Profiler experience to surface clearer guidance
+            earlier and help users move from diagnosis to action.
+          </p>
+          <p>Key changes included:</p>
+          <ul id="takeaway">
+            <li class="lists">
+              Surfacing contextual guidance for different types of slow queries.
+              For example, when a query was missing an index, the experience
+              highlighted this issue and linked directly to index creation.
+            </li>
+            <li class="lists">
+              Highlighting guidance for queries using $lookup operations, which
+              are known to cause performance issues, along with tips on how to
+              reduce or optimize these operations.
+            </li>
+            <li class="lists">
+              Bringing key information, such as the query log, into the primary
+              view. User research showed this was information users consistently
+              wanted to see upfront.
+            </li>
+          </ul>
+          <div class="under_images">
+            <img
+              src="images/mongo/profiler-after.png"
+              class="img-responsive mongo-modal-trigger"
+              alt="Profiler after redesign"
+            />
+          </div>
+
+          <h3>Outcome</h3>
+          <p>
+            Parts of the redesign were tested through separate experiments.
+            Guidance related to index creation and $lookup usage was tested
+            earlier and showed strong results, including increased index
+            creation rates and reduced $lookup usage. Given the positive
+            results, these changes were released to production.
+          </p>
+          <p>
+            Other parts of the redesign are ongoing as the team explores
+            additional guidance and opportunities to leverage AI. Early signals
+            indicate that users value the in-product guidance, and engagement
+            with these features continues to correlate with improvements in key
+            performance metrics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--------------- animation container clossed --------------->
+
+    <div
+      class="modal"
+      id="mongoImageModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg mongo-modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img
+              id="mongoModalImage"
+              src=""
+              class="img-responsive"
+              alt="Expanded project image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------- Footer --------------->
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+        <p id="footer">Created by Arlex 2026</p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    AOS.init();
+    $(".mongo-modal-trigger").on("click", function () {
+      $("#mongoModalImage").attr("src", $(this).attr("src"));
+      $("#mongoModalImage").attr("alt", $(this).attr("alt"));
+      $("#mongoImageModal").modal("show");
+    });
+  </script>
+</html>

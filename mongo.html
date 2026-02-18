@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MongoDB</title>
+
+    <!-- required tags  -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:300,500"
+      rel="stylesheet"
+    />
+
+    <!-- style -->
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- css animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+  <body>
+    <!--------------- nav bar --------------->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"> AG </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html"> Projects </a></li>
+            <li><a href="resume.pdf" target="_blank"> Resume </a></li>
+            <li><a href="about.html"> About </a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!--------------- nav bar closed --------------->
+
+    <!--------------- animation container --------------->
+    <div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h1>MongoDB: Atlas Growth</h1>
+          <p>
+            During my time at MongoDB, I led and contributed to a wide range of
+            growth experiments. Many of these projects produced great results
+            and were shipped to production and remain live today. The work
+            spanned key parts of the user lifecycle, including onboarding,
+            monetization, and retention.
+          </p>
+          <p>
+            I also contributed to experiments that did not move metrics but
+            produced valuable insights that informed future decisions. Across
+            all of this work, my focus was on identifying growth opportunities
+            that addressed real user pain points while improving key business
+            metrics.
+          </p>
+          <p>
+            To respect confidentiality, specific business metrics are not
+            disclosed. Outcomes are described at a directional level.
+          </p>
+          <ul class="nav nav-tabs project-tabs">
+            <li>
+              <a href="profiler.html">Project 1: Performance Diagnosis</a>
+            </li>
+            <li class="active">
+              <a href="mongo.html">Project 2: Cluster Creation</a>
+            </li>
+            <li><a href="other-projects.html">Other Projects</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--------------- project 1 copy --------------->
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h1>Cluster Starter Page</h1>
+          <p>
+            The cluster creation page is one of the first experiences users
+            encounter when setting up MongoDB Atlas and a critical onboarding
+            step. The previous flow exposed advanced configuration options too
+            early, creating unnecessary friction for first-time users.
+          </p>
+
+          <h3>Problem</h3>
+          <p>
+            New users struggled to complete cluster creation quickly due to
+            confusion around advanced options, delaying time-to-value and
+            negatively impacting early conversion and retention.
+          </p>
+          <div class="under_images">
+            <p class="image-label">
+              Before: Creating a cluster required selecting many advanced
+              configurations
+            </p>
+            <img
+              src="images/mongo/Cluster Builder.png"
+              class="img-responsive mongo-modal-trigger"
+              alt="MongoDB Cluster Builder"
+            />
+          </div>
+
+          <h3>Hypothesis</h3>
+          <p>
+            By simplifying the cluster creation flow, clarifying core
+            configuration choices, and deferring advanced settings to a
+            secondary page, users would complete cluster creation faster,
+            improving cluster creation rates, time-to-value, and downstream
+            retention.
+          </p>
+
+          <h3>Solution</h3>
+          <p>
+            I led the redesign of the cluster creation experience (internally
+            known as the Cluster Starter Page), focusing on:
+          </p>
+          <ul id="takeaway">
+            <li class="lists">Streamlining the primary creation flow</li>
+            <li class="lists">
+              Hiding advanced configuration behind a secondary page
+            </li>
+            <li class="lists">
+              Making key decisions clearer and easier to understand for
+              first-time users
+            </li>
+          </ul>
+          <div class="under_images">
+            <img
+              src="images/mongo/CST.png"
+              class="img-responsive mongo-modal-trigger"
+              alt="MongoDB case study image"
+            />
+          </div>
+
+          <h3>Outcome</h3>
+          <p>The redesigned experience resulted in:</p>
+          <ul id="takeaway">
+            <li class="lists">Increased overall clusters created</li>
+            <li class="lists">Higher paid tier conversion</li>
+            <li class="lists">Faster time-to-value for new users</li>
+          </ul>
+          <p>
+            Following successful experimentation, the redesign was approved and
+            launched broadly. The page has since undergone multiple iterations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--------------- animation container clossed --------------->
+
+    <div
+      class="modal"
+      id="mongoImageModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg mongo-modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img
+              id="mongoModalImage"
+              src=""
+              class="img-responsive"
+              alt="Expanded project image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------- Footer --------------->
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+        <p id="footer">Created by Arlex 2026</p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    AOS.init();
+    $(".mongo-modal-trigger").on("click", function () {
+      $("#mongoModalImage").attr("src", $(this).attr("src"));
+      $("#mongoModalImage").attr("alt", $(this).attr("alt"));
+      $("#mongoImageModal").modal("show");
+    });
+  </script>
+</html>

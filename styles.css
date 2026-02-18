@@ -98,6 +98,14 @@ p{
     margin: 0px;
     transition: all .2s ease-in-out;
     margin-bottom: 20px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.card > img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
 }
 
 .card:hover {
@@ -133,6 +141,11 @@ p{
 #second-row, #third-row{
 	margin-top: 30px;
 }
+
+.older-projects-heading{
+	margin-top: 48px;
+}
+
 #footer{
 	margin-top: 70px;
 	text-align: center;
@@ -156,6 +169,3 @@ p{
 		margin-top: 25px;
 	}
 }
-
-
-
