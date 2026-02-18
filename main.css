@@ -183,6 +183,10 @@ video {
   border-radius: 50px;
 }
 
+.ahero-solution-image {
+  border-radius: 12px;
+}
+
 .small_images {
   margin-right: 9%;
   margin-top: 25px;

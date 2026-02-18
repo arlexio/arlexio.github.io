@@ -108,6 +108,11 @@ p{
     object-fit: cover;
 }
 
+.ahero-cover {
+    object-fit: contain !important;
+    background-color: #ffffff;
+}
+
 .card:hover {
     box-shadow: 5px 5px 3px 0 rgba(0,0,0,0.2);
     transform: scale(1.03);
