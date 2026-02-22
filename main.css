@@ -200,6 +200,30 @@ video {
 
 #about {
   margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-layout {
+  width: 100%;
+  max-width: 1400px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.about-column {
+  flex: 1;
+}
+
+.about-text {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cta {
@@ -235,5 +259,16 @@ hr {
   .row {
     margin-left: 8%;
     margin-right: 8%;
+  }
+
+  .about-layout {
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .about-column {
+    width: 100%;
   }
 }
