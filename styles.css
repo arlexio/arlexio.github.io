@@ -2,7 +2,7 @@ body{
 	font-family: 'Catamaran', sans-serif;
 	font-weight: 300;
 	height: 100%;
-	background-color: white;
+	background-color: #F6F6F6;
 	margin-top: 25px;
 	color: #3f3f3f;
 }
@@ -51,7 +51,7 @@ p{
 
 /* ---------------- navigation ----------------  */
 .navbar-default {
-    background-color: white;
+    background-color: #F6F6F6;
     border: 0;
    	margin-top: 15px;
    	margin-left: 8%;
