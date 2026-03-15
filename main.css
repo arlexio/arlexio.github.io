@@ -154,6 +154,12 @@ video {
   height: auto;
   border: 1px solid black;
 }
+
+#banner video {
+  border-radius: 18px;
+  border: 1px solid #d3d3d3;
+}
+
 .under_images {
   margin-top: 25px;
 }
@@ -185,6 +191,9 @@ video {
 
 .ahero-solution-image {
   border-radius: 12px;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .small_images {

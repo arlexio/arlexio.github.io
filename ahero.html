@@ -83,11 +83,16 @@
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div id="banner">
-            <img
-              src="images/ahero/ahero.png"
+            <video
               class="img-responsive"
-              alt="Ahero app image"
-            />
+              autoplay
+              loop
+              muted
+              playsinline
+              aria-label="Ahero overview animation"
+            >
+              <source src="images/ahero/overview_gif.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>
@@ -98,10 +103,10 @@
             href="https://aheroapp.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-primary btn-lg"
+            class="btn btn-primary btn-lg project-cta-btn"
             style="margin-top: 24px"
           >
-            View Live Site
+            View Live Site <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
           </a>
         </div>
       </div>
@@ -151,9 +156,9 @@
           </p>
           <div class="under_images">
             <img
-              src="images/ahero/addblock.png"
+              src="images/ahero/ahero.png"
               class="img-responsive ahero-solution-image"
-              alt="Ahero add block screen"
+              alt="Ahero app image"
             />
             <p>Users can add any website or app that distracts them.</p>
           </div>
